@@ -1,0 +1,29 @@
+{
+  "name": "jevguard",
+  "version": "0.1.0",
+  "description": "Verifies that the agent (Claude Code / Codex CLI) follows the project's rules, through a System One model",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "jevguard-hook": "./dist/bin/jevguard-hook.js",
+    "jevguard-validate": "./dist/bin/jevguard-validate.js"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "bundle": "esbuild src/bin/jevguard-hook.ts src/bin/jevguard-validate.ts --bundle --platform=node --format=esm --outdir=dist/bin",
+    "build": "npm run typecheck && npm run bundle",
+    "test": "vitest run",
+    "hook": "tsx src/bin/jevguard-hook.ts",
+    "validate": "tsx src/bin/jevguard-validate.ts"
+  },
+  "dependencies": {
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "esbuild": "0.28.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.2.0"
+  }
+}

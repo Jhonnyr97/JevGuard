@@ -1,0 +1,21 @@
+{
+  "name": "jevguard",
+  "description": "Verifies that the agent follows the project's rules through a System One model: blocks tool calls, edits, or the final response when a rule fails.",
+  "version": "0.1.0",
+  "author": { "name": "Jhonnyr97", "url": "https://github.com/Jhonnyr97" },
+  "repository": "https://github.com/Jhonnyr97/JevGuard",
+  "userConfig": {
+    "jev_api_key": {
+      "type": "string",
+      "title": "Jev API key",
+      "description": "Bearer token for the Jev verification backend (https://docs.typesafe.ai). Stored securely, never written to a project file. Leave empty for a local backend that doesn't require auth.",
+      "sensitive": true
+    },
+    "jev_base_url": {
+      "type": "string",
+      "title": "Jev backend URL",
+      "description": "Base URL of the Jev-compatible verification backend.",
+      "default": "https://api.typesafe.ai"
+    }
+  }
+}

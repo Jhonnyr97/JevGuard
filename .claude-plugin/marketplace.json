@@ -1,0 +1,16 @@
+{
+  "name": "jevguard",
+  "owner": {
+    "name": "Jhonnyr97",
+    "url": "https://github.com/Jhonnyr97"
+  },
+  "description": "JevGuard: verifies that the agent follows project rules through a System One (Jev) model.",
+  "plugins": [
+    {
+      "name": "jevguard",
+      "source": "./",
+      "description": "Verifies that the agent follows the project's rules through a System One model (Jev): blocks tool calls, edits, or the final response when a rule fails.",
+      "version": "0.1.0"
+    }
+  ]
+}
